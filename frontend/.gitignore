@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# macOS
+.DS_Store
+
+# 后端构建输出
+backend/target/
+
+# 数据库文件
+backend/data/
+
+
+
