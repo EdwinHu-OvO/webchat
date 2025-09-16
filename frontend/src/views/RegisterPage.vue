@@ -13,7 +13,7 @@ const form = ref({ username: '', password: '' });
 const touched = ref({ username: false, password: false });
 const triedSubmit = ref(false);
 
-const onLogin = async () => {
+const onRegister = async () => {
   triedSubmit.value = true;
   if (!form.value.username.trim() || !form.value.password.trim()) {
     message.warning('请输入用户名和密码');
@@ -21,16 +21,15 @@ const onLogin = async () => {
   }
   loading.value = true;
   try {
-    const { data } = await api.post('/api/auth/login', form.value);
+    const { data } = await api.post('/api/auth/register', form.value);
     userStore.setUser(data);
     router.push('/chat');
   } catch (e) {
-    message.error(e?.response?.data?.message || '登录失败');
+    message.error(e?.response?.data?.message || '注册失败');
   } finally {
     loading.value = false;
   }
 };
-
 </script>
 
 <template>
@@ -70,10 +69,10 @@ const onLogin = async () => {
           />
         </a-form-item>
         <div style="margin: 10px;">
-          <a href="/register">还没有账号？注册一个新账号</a>
+            <a href="/login">已有账号？登录</a>
         </div>
         <a-space>
-          <a-button type="primary" size="large" :loading="loading" @click="onLogin">登录</a-button>
+          <a-button :loading="loading" type="primary" size="large" @click="onRegister">注册</a-button>
         </a-space>
       </a-form>
     </a-card>

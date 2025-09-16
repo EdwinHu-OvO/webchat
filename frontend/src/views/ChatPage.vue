@@ -1,3 +1,4 @@
+<!-- eslint-disable no-empty -->
 <script setup>
 import { onMounted, onBeforeUnmount, ref, computed, render, watch, nextTick } from 'vue';
 import { useUserStore } from '../stores/user';
@@ -509,7 +510,7 @@ watch(() => renderList.value, () => {
         </template>
       </a-page-header>
       <a-layout-content style="display: flex; flex-direction: column; gap: 8px">
-        <div style="flex: 1; background-color: #f6f9fe; padding: 30px; overflow: auto" ref="chatContainer">
+        <div ref="chatContainer" style="flex: 1; background-color: #f6f9fe; padding: 30px; overflow: auto">
           <template v-for="item in renderList" :key="item.key">
             <a-divider v-if="item.type === 'divider'" orientation="center" plain>{{
               item.label
@@ -522,10 +523,11 @@ watch(() => renderList.value, () => {
           </template>
         </div>
         <div style="display: flex; gap: 8px; padding: 8px 16px 20px 16px">
-          <a-textarea v-model:value="input" :placeholder="placeholder" @keydown.enter.ctrl="sendMessage"
+          <a-textarea
+v-model:value="input" :placeholder="placeholder" :style="{ height: inputHeight, transition: 'height 0.3s ease', resize: 'none' }"
+          @keydown.enter.ctrl="sendMessage"
           @focus="inputHeight = '96px'"
           @blur="inputHeight = '32px'"
-          :style="{ height: inputHeight, transition: 'height 0.3s ease', resize: 'none' }"
            />
           <a-button type="primary" @click="sendMessage">发送</a-button>
         </div>

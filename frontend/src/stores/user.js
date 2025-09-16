@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 import { defineStore } from 'pinia';
 
 const STORAGE_KEY = 'webchat:user';

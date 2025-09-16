@@ -8,12 +8,14 @@ import 'ant-design-vue/dist/reset.css';
 
 import LoginPage from './views/LoginPage.vue';
 import ChatPage from './views/ChatPage.vue';
+import RegisterPage from './views/RegisterPage.vue';
 import { useUserStore } from './stores/user';
 
 const routes: RouteRecordRaw[] = [
   { path: '/', redirect: '/login' },
   { path: '/login', component: LoginPage },
   { path: '/chat', component: ChatPage },
+  { path: '/register', component: RegisterPage },
 ];
 
 const router = createRouter({ history: createWebHistory(), routes });

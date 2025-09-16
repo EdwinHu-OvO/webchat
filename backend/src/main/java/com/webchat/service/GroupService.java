@@ -69,6 +69,7 @@ public class GroupService {
     public void leaveGroup(Long groupId, Long userId) {
         if (!groupMemberRepository.existsByGroupIdAndUserId(groupId, userId))
             return;
+        // 不能删，删了会报错
         GroupChat gc = groupChatRepository.findById(groupId).orElseThrow();
         groupMemberRepository.deleteByGroupIdAndUserId(groupId, userId);
     }

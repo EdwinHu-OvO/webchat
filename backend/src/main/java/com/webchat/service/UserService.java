@@ -28,7 +28,7 @@ public class UserService {
         });
         User user = new User();
         user.setUsername(username);
-        user.setPassword(password); // 演示用，生产需加密
+        user.setPassword(password);
         return userRepository.save(user);
     }
 
@@ -46,7 +46,7 @@ public class UserService {
             throw new IllegalArgumentException("不能添加自己为好友");
         }
         if (friendshipRepository.existsByUserIdAndFriendId(userId, friendId)) {
-            return; // 已存在
+            return;
         }
         User user = userRepository.findById(userId).orElseThrow();
         User friend = userRepository.findById(friendId).orElseThrow();
