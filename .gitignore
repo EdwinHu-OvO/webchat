@@ -29,7 +29,4 @@ dist-ssr
 backend/target/
 
 # 数据库文件
-data/*
-
-
-
+data/webchat.db
