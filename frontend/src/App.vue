@@ -1,7 +1,12 @@
+<script setup>
+import theme from "../public/theme.json"
+</script>
 <script setup></script>
 
 <template>
-  <router-view />
+  <a-config-provider :theme = theme>
+    <router-view />
+  </a-config-provider>
 </template>
 
 <style scoped>

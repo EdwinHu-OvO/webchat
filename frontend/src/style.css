@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 /* 选中会话高亮 */
 .selected {
-  background-color: #e6f4ff;
-  border-radius: 8px;
+  background-color: #e6fffb;
+  border-radius: 10px;
 }
 
 /* 消息气泡与行布局 */
@@ -29,7 +29,7 @@
   word-break: break-word;
 }
 .msg-bubble.mine {
-  background: #1677ff;
+  background: #00ccff;
   color: #fff;
 }
 
@@ -87,9 +87,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

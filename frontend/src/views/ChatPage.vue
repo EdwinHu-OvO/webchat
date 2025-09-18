@@ -408,6 +408,8 @@ watch(() => renderList.value, () => {
 </script>
 
 <template>
+  <a-config-provider :theme = theme>
+  </a-config-provider>
   <a-layout style="height: 100vh; width: 100vw">
     <a-layout-sider width="320" theme="light">
       <a-avatar

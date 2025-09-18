@@ -5,6 +5,7 @@ import { useUserStore } from '../stores/user';
 import { message } from 'ant-design-vue';
 import api from '../utils/api';
 import ParticlesBg from '../components/ParticlesBg.vue';
+import theme from "../../public/theme.json"
 
 const router = useRouter();
 const userStore = useUserStore();
@@ -34,6 +35,8 @@ const onLogin = async () => {
 </script>
 
 <template>
+  <!-- fix theme not apply -->
+  <a-config-provider :theme = theme></a-config-provider>
   <div class="absolute w-100vw h-100vh z-10 translate-x-[-50%] translate-y-[-50%]">
     <a-card
       style="

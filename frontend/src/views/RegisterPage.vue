@@ -5,6 +5,7 @@ import { useUserStore } from '../stores/user';
 import { message } from 'ant-design-vue';
 import api from '../utils/api';
 import ParticlesBg from '../components/ParticlesBg.vue';
+import theme from "../../public/theme.json"
 
 const router = useRouter();
 const userStore = useUserStore();
