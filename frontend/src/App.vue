@@ -1,5 +1,5 @@
 <script setup>
-import theme from "../public/theme.json"
+import theme from "./theme.json"
 </script>
 <script setup></script>
 

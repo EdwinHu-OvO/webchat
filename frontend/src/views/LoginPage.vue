@@ -5,7 +5,7 @@ import { useUserStore } from '../stores/user';
 import { message } from 'ant-design-vue';
 import api from '../utils/api';
 import ParticlesBg from '../components/ParticlesBg.vue';
-import theme from "../../public/theme.json"
+import theme from "../theme.json"
 
 const router = useRouter();
 const userStore = useUserStore();
@@ -76,7 +76,7 @@ const onLogin = async () => {
           <a href="/register">还没有账号？注册一个新账号</a>
         </div>
         <a-space>
-          <a-button type="primary" size="large" :loading="loading" @click="onLogin">登录</a-button>
+          <a-button type="primary" size="large" style="width: 300px" :loading="loading" @click="onLogin">登录</a-button>
         </a-space>
       </a-form>
     </a-card>
