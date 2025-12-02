@@ -15,6 +15,9 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    // 用户头像URL（相对路径或绝对URL）
+    private String avatarUrl;
+
     public Long getId() {
         return id;
     }
@@ -37,5 +40,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 }

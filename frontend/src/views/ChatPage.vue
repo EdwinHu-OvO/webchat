@@ -139,6 +139,7 @@ onMounted(async () => {
 
   socket.value.on('connect', () => {});
   socket.value.on('private_message', (msg) => {
+    console.log(msg)
     if (activeSession.value.type !== 'friend') return;
     const related =
       (msg.senderId === me.value.id && msg.receiverId === activeSession.value.id) ||
