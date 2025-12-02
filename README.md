@@ -1,6 +1,10 @@
 # WebChat 实时聊天系统
 
-## 面向大模型开发 ~~（AI 写的）~~ still building
+## 可用于作业交差
+
+## 面向大模型开发 ~~（AI 写的）~~
+
+也可使用 react 重构的前端https://github.com/EdwinHu-OvO/webchat-frontend-next
 
 ## 简要说明：
 
@@ -73,3 +77,7 @@
 
 - 使用 SQLite 数据库，数据文件位于 `backend/data/webchat.db`
 - 首次运行时会自动创建数据库表和初始数据
+
+### 用户头像
+
+- 上传文件位于 `backend/data/uplodes`
